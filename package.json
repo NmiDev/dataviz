@@ -1,0 +1,19 @@
+{
+  "name": "dataviz",
+  "version": "1.0.0",
+  "description": "Data visualisation with Angular and D3.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NmiDev/dataviz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NmiDev/dataviz/issues"
+  },
+  "homepage": "https://github.com/NmiDev/dataviz#readme"
+}
