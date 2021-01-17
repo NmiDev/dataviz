@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mongodb": "docker-compose up -d"
+    "mongodb": "docker-compose up -d",
+    "api": "cd dataviz-api && npm run start"
   },
   "repository": {
     "type": "git",
