@@ -1,4 +1,5 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { UpdateApplicationDto } from './dto/update-application.dto';
 import { Application } from './entities/application.entity';
 
 @Injectable()
@@ -28,11 +29,12 @@ export class ApplicationsService {
     return application;
   }
 
-  public create(applicationDto: any): void {
-    this.applications.push(applicationDto);
+  public create(createApplicationDto: any): void {
+    this.applications.push(createApplicationDto);
+    return createApplicationDto;
   }
 
-  public update(id: string, applicationDto: any): void {
+  public update(id: string, updateApplicationDto: UpdateApplicationDto): void {
     const existingApplication = this.findOne(id);
     if (existingApplication) {
       // update the existing entity

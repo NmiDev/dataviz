@@ -4,12 +4,13 @@ import {
   Delete,
   Get,
   Param,
+  Patch,
   Post,
-  Put,
   Query,
 } from '@nestjs/common';
 import { ApplicationsService } from './applications.service';
-import { ApplicationDto } from './dto/application.dto';
+import { CreateApplicationDto } from './dto/create-application.dto';
+import { UpdateApplicationDto } from './dto/update-application.dto';
 import { Application } from './entities/application.entity';
 
 @Controller('applications')
@@ -28,16 +29,16 @@ export class ApplicationsController {
   }
 
   @Post()
-  public create(@Body() applicationDto: ApplicationDto): void {
-    return this.applicationsService.create(applicationDto);
+  public create(@Body() createApplicationDto: CreateApplicationDto): void {
+    return this.applicationsService.create(createApplicationDto);
   }
 
-  @Put(':id')
+  @Patch(':id')
   public update(
     @Param('id') id: string,
-    @Body() applicationDto: ApplicationDto,
+    @Body() updateApplicationDto: UpdateApplicationDto,
   ): void {
-    return this.applicationsService.update(id, applicationDto);
+    return this.applicationsService.update(id, updateApplicationDto);
   }
 
   @Delete(':id')

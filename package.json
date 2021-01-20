@@ -1,7 +1,7 @@
 {
   "name": "dataviz",
   "version": "1.0.0",
-  "description": "Data visualisation with Angular and D3.js",
+  "description": "Data visualization with Angular and D3.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
