@@ -1,6 +1,6 @@
 import { IsString } from 'class-validator';
 
-export class CreateApplicationDto {
+export class ApplicationDto {
   @IsString()
   readonly code: string;
 
